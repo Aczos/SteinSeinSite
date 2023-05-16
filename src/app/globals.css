@@ -2,26 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer components {
+    .border-animation {
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .border-animation::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #D1D5DB; /* kolor szary */
+      transition: width 0.3s;
+    }
+  
+    .border-animation:hover::before {
+      width: 100%;
+    }
+  
+    
+      .mobile-border-animation::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #D1D5DB; /* kolor szary */
+        animation: slide 1s forwards ease;
+      }
+    
+      
+      @keyframes slide {
+        from {
+          width: 0;
+        }
+        to {
+          width: 75%;
+        }
+      }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+      .exit-animation{
+        animation: spiner 0.4s forwards ease;
+      }
+
+      @keyframes spiner {
+        from{
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+        
+      }
+
+
+      .rainbow-text {
+        animation: rainbow-text 10s linear infinite;
+      }
+      @keyframes rainbow-text {
+        0% { color: red; }
+        14% { color: orange; }
+        28% { color: yellow; }
+        42% { color: green; }
+        57% { color: blue; }
+        71% { color: indigo; }
+        85% { color: violet; }
+        100% { color: red; }
+      }
+
+
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
