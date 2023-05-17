@@ -13,8 +13,8 @@ const marriweather = Merriweather({
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="relative   py-4 ">
-      <div className="">
+    <nav className=" relative top-0 left-0 py-4 ">
+      <div className="relative top-0 left-0">
         <div className=" flex px-6 justify-around md:block md:justify-start ">
           <div className="flex items-center ">
             <div className="flex items-center gap-4">
@@ -52,7 +52,7 @@ export const Nav = () => {
 
       {/* Mobile menu, show/hide based on menu state. */}
       {isOpen && (
-        <div className="absolute top-0 left-0 w-screen  h-screen  overflow-hidden z-50 bg-black  p-2  md:hidden">
+        <div className="absolute top-0 left-0  w-screen  h-screen   overflow-hidden z-50 bg-black  p-2  md:hidden">
           <div className=" overflow-hidden">
             <div className="px-5 pt-4 flex items-center justify-between">
               <div className=" -mr-2 flex w-full justify-end">

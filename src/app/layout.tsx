@@ -1,5 +1,7 @@
+import { Header } from "@/components/Header/Header";
 import "./globals.css";
 import { Roboto } from "next/font/google";
+import { Nav } from "@/components/Nav/Nav";
 
 const roboto = Roboto({
   weight: "300",
@@ -13,7 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" className={roboto.className}>
-      <body className=" bg-black text-gray-300 max-w-[1600px] mx-auto  ">
+      <body className="relative  bg-black text-gray-300 max-w-[1600px] mx-auto  ">
+        <Nav />
         {children}
       </body>
     </html>
