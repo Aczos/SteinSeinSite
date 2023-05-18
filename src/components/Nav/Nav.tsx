@@ -13,8 +13,8 @@ const marriweather = Merriweather({
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className=" relative top-0 left-0 py-4 ">
-      <div className="relative top-0 left-0">
+    <nav className="sticky z-50 bg-black top-0 py-4 ">
+      <div>
         <div className=" flex px-6 justify-around md:block md:justify-start ">
           <div className="flex items-center ">
             <div className="flex items-center gap-4">
@@ -31,9 +31,9 @@ export const Nav = () => {
             <div className="hidden md:flex md:w-full md:justify-center">
               <ul className=" flex  gap-10 space-x-4 capitalize text-xl ">
                 {/* Menu items for desktop */}
-                <GenericLink href="#" title="home" />
+                <GenericLink href="/" title="home" />
                 <GenericLink href="#" title="about" />
-                <GenericLink href="#" title="services" />
+                <GenericLink href="#services" title="services" />
                 <GenericLink href="#" title="contact" />
               </ul>
             </div>
@@ -63,10 +63,10 @@ export const Nav = () => {
             </div>
             <ul className=" px-2 pt-2 pb-3 space-y-1 capitalize text-2xl">
               {/* Menu items for mobile */}
-              <GenericLink href="#" title="home" isMobile={true} />
-              <GenericLink href="#" title="about" isMobile={true} />
-              <GenericLink href="#" title="services" isMobile={true} />
-              <GenericLink href="#" title="contact" />
+              <GenericLink href="/" title="home" isMobile={true} />
+              <GenericLink href="/about" title="about" isMobile={true} />
+              <GenericLink href="/services" title="services" isMobile={true} />
+              <GenericLink href="/contact" title="contact" />
 
               {/* More items... */}
             </ul>

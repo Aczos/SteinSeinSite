@@ -8,16 +8,21 @@ interface GenericLinkProps {
 }
 
 export const GenericLink = ({ href, title, isMobile }: GenericLinkProps) => {
+  const scrollSmoothly = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <li className={`relative  ${isMobile ? "pb-3" : ""} `}>
-      <Link
+      <a
         href={href}
         className={`${
           isMobile ? "mobile-border-animation " : "border-animation"
         } `}
+        onClick={(e) => scrollSmoothly(e, href.slice(1))}
       >
         {title}
-      </Link>
+      </a>
     </li>
   );
 };
