@@ -22,6 +22,16 @@
     "react-dom": "18.2.0",
     "swr": "^2.1.5",
     "tailwindcss": "3.3.2",
+<<<<<<< HEAD
+    "typescript": "5.0.4",
+    "uninstall": "^0.0.0"
+=======
+<<<<<<< HEAD
     "typescript": "5.0.4"
+=======
+    "typescript": "5.0.4",
+    "uninstall": "^0.0.0"
+>>>>>>> 48bc3d7 (update)
+>>>>>>> ce86e8509fd0931aac6adb9c3a5d7f6f4b4d343c
   }
 }
