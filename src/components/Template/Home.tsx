@@ -6,6 +6,8 @@ import photo1 from "../../../public/images/photo1.jpg"
 import photo2 from "../../../public/images/photo2.jpg"
 import photo3 from "../../../public/images/photo3.jpg"
 import { EnvelopeIcon } from "@heroicons/react/24/solid"
+import { GenericLink } from "../Nav/GenericLink";
+import { InputCard, TextAreaCard, CheckboxCard } from "../input/Input"
 
 
 export const Home = () => {
@@ -67,43 +69,23 @@ export const Home = () => {
       </section>
 
 
-      <section className="lg:flex lg:w-full  ">
+      <section className="lg:flex lg:w-full    ">
 
-        <div className="lg:flex lg:w-4/6 p-6 ">
+        <div className="lg:flex w-2/4 mx-auto p-6  ">
 
-        <div className="flex  flex-col w-4/5 mx-auto lg:m-0 lg:w-4/5 ">
+        <div className="flex  flex-col  mx-auto lg:mr-2   ">
         <h2 className="text-3xl font-bold ">Contact us</h2>
         <p className="text-1xl font-bold lg:w-2/3" >We want to help you grow your business online. Start the conversation by calling us or sending an email.</p>
         
-
-       
-
+         
        <div>
-       <label className="text-1xl font-bold  flex  uppercase py-2">name <span className="text-red-600  ml-2">*</span></label>
-       <input className="bg-black border-b-2  w-full  mx-auto lg:w-2/3"   type="text"/>
-       </div>
-
-       <div>
-       <label className="text-1xl font-bold  flex  uppercase py-2">Email addres <span className="text-red-600  ml-2">*</span></label>
-       <input className="bg-black border-b-2  w-full  mx-auto lg:w-2/3" type="text"/>
-       </div>
-
-       <div>
-       <label className="text-1xl font-bold  flex  uppercase py-2">Phone number <span className="text-red-600  ml-2" >*</span></label>
-       <input className="bg-black border-b-2  w-full  mx-auto lg:w-2/3 " type="number" />
-       </div>
-
-        <div>
-       <label className="text-1xl font-bold  flex  uppercase py-2">Message </label>
-       <textarea className="bg-black border-b-2 w-full h-2/3 lg:w-2/3"   ></textarea>
-       </div>
-
-       <div className="flex ">
-        <input type="checkbox" />
-        <label className="text-1xl font-bold lg:w-2/3  uppercase py-2"> I allow this website to store my submission so they can respond to my inquiry <span className="text-red-600  ml-2">*</span></label> 
-        </div>
-
+       <InputCard label={'Name'}></InputCard>
+       <InputCard label={'Email addres'}></InputCard>
+       <InputCard label={'Phone number'}></InputCard>
+       <TextAreaCard label={'message'}></TextAreaCard>
+       <CheckboxCard label={'I allow this website to store my submission so they can respond to my inquiry'}></CheckboxCard>
        <button className="w-4/5 bg-[#C19957] m-auto py-2 text-xl font-bold lg:w-2/3 lg:m-0">Submit</button>
+       </div>
        </div>
         </div>
         
